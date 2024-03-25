@@ -11,11 +11,11 @@ const Navbar = ({ products, onSearch, cartItems }) => {
 
   return (
     <Box bg="white" p={4} boxShadow="md">
-      <HStack justify="space-between">
+      <HStack justify="center" spacing={8}>
         <Text fontSize="2xl" fontWeight="bold" color="pink.500">
           The Day
         </Text>
-        <HStack spacing={4}>
+        <HStack spacing={4} justify="center">
           <Input placeholder="Search items..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
           <IconButton icon={<FaSearch />} aria-label="Search" onClick={handleSearch} />
           <HStack>
