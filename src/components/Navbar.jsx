@@ -26,9 +26,11 @@ const Navbar = ({ products, onSearch, cartItems }) => {
         </HStack>
       </HStack>
       <HStack justify="center" spacing={8} mt={4}>
-        <Text>Submenu Item 1</Text>
-        <Text>Submenu Item 2</Text>
-        <Text>Submenu Item 3</Text>
+        <Text>Wedding Hall</Text>
+        <Text>Wedding Dress</Text>
+        <Text>Photo studio</Text>
+        <Text>Make up</Text>
+        <Text>Suit</Text>
       </HStack>
     </VStack>
   );
