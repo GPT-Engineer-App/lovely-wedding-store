@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { Box, HStack, Input, IconButton, Text, VStack } from "@chakra-ui/react";
 import { FaSearch, FaShoppingCart, FaUser } from "react-icons/fa";
 
-const Navbar = ({ products, onSearch, cartItems }) => {
+import { Link } from "react-router-dom";
+
+const Navbar = ({ onSearch, cartItems }) => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearch = () => {
@@ -26,11 +28,11 @@ const Navbar = ({ products, onSearch, cartItems }) => {
         </HStack>
       </HStack>
       <HStack justify="center" spacing={8} mt={4}>
-        <Text>Wedding Hall</Text>
-        <Text>Wedding Dress</Text>
-        <Text>Photo studio</Text>
-        <Text>Make up</Text>
-        <Text>Suit</Text>
+        <Link to="/wedding-hall">Wedding Hall</Link>
+        <Link to="/wedding-dress">Wedding Dress</Link>
+        <Link to="/photo-studio">Photo Studio</Link>
+        <Link to="/makeup">Makeup</Link>
+        <Link to="/suit">Suit</Link>
       </HStack>
     </VStack>
   );
