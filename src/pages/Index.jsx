@@ -62,7 +62,7 @@ const Index = () => {
       <Box bg="white" p={4} boxShadow="md">
         <HStack justify="space-between">
           <Heading size="xl" color="pink.500">
-            Eternal Love
+            The Day
           </Heading>
           <HStack>
             <FaShoppingCart />
@@ -116,7 +116,7 @@ const Index = () => {
           <Heading size="xl" mb={8} color="pink.500">
             About Us
           </Heading>
-          <Text>At Eternal Love, we believe that every wedding should be a reflection of the couple's unique love story. We offer a carefully curated collection of wedding essentials to make your special day truly unforgettable. From stunning dresses to elegant decorations, we have everything you need to create the wedding of your dreams.</Text>
+          <Text>At The Day, we believe that every wedding should be a reflection of the couple's unique love story. We offer a carefully curated collection of wedding essentials to make your special day truly unforgettable. From stunning dresses to elegant decorations, we have everything you need to create the wedding of your dreams.</Text>
         </Box>
 
         <Box mt={12}>
@@ -126,7 +126,7 @@ const Index = () => {
           <VStack align="stretch" spacing={4}>
             <HStack>
               <FaEnvelope />
-              <Text>info@eternallove.com</Text>
+              <Text>info@theday.com</Text>
             </HStack>
             <HStack>
               <FaPhone />
