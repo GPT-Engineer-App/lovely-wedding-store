@@ -3,11 +3,11 @@ import { Box, Text, Heading, VStack, HStack, Image, Grid, Button, Input, Textare
 import { FaShoppingCart, FaUser, FaEnvelope, FaPhone } from "react-icons/fa";
 
 const categories = [
+  { name: "Wedding Halls", image: "https://images.unsplash.com/photo-1587271407850-8d438ca9fdf2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwd2VkZGluZyUyMGhhbGx8ZW58MHx8fHwxNzExMzY3NDMwfDA&ixlib=rb-4.0.3&q=80&w=1080" },
   { name: "Wedding Dresses", image: "https://images.unsplash.com/photo-1676132067504-31b08cf62308?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwd2VkZGluZyUyMGRyZXNzfGVufDB8fHx8MTcxMTM2NzQyOHww&ixlib=rb-4.0.3&q=80&w=1080" },
+  { name: "Photo Studios", image: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHx3ZWRkaW5nJTIwcGhvdG8lMjBzdHVkaW98ZW58MHx8fHwxNzExMzY3NDMwfDA&ixlib=rb-4.0.3&q=80&w=1080" },
+  { name: "Makeup", image: "https://images.unsplash.com/photo-1595475207225-428b62bda831?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxicmlkYWwlMjBtYWtldXB8ZW58MHx8fHwxNzExMzY3NDMwfDA&ixlib=rb-4.0.3&q=80&w=1080" },
   { name: "Suits", image: "https://images.unsplash.com/photo-1491336477066-31156b5e4f35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxzdHlsaXNoJTIwd2VkZGluZyUyMHN1aXR8ZW58MHx8fHwxNzExMzY3NDI4fDA&ixlib=rb-4.0.3&q=80&w=1080" },
-  { name: "Wedding Rings", image: "https://images.unsplash.com/photo-1481066717861-4775e000c88a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxiZWF1dGlmdWwlMjB3ZWRkaW5nJTIwcmluZ3N8ZW58MHx8fHwxNzExMzY3NDI4fDA&ixlib=rb-4.0.3&q=80&w=1080" },
-  { name: "Decorations", image: "https://images.unsplash.com/photo-1522413452208-996ff3f3e740?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxyb21hbnRpYyUyMHdlZGRpbmclMjBkZWNvcmF0aW9uc3xlbnwwfHx8fDE3MTEzNjc0Mjl8MA&ixlib=rb-4.0.3&q=80&w=1080" },
-  { name: "Invitations", image: "https://images.unsplash.com/photo-1519741497674-611481863552?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwd2VkZGluZyUyMGludml0YXRpb25zfGVufDB8fHx8MTcxMTM2NzQyOXww&ixlib=rb-4.0.3&q=80&w=1080" },
 ];
 
 const products = [
