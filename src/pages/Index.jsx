@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Box, Text, Heading, VStack, HStack, Image, Grid, Button, Input, Textarea, useToast } from "@chakra-ui/react";
-import { FaShoppingCart, FaUser, FaEnvelope, FaPhone } from "react-icons/fa";
+import { FaEnvelope, FaPhone } from "react-icons/fa";
+import Navbar from "../components/Navbar";
 
 const categories = [
   { name: "Wedding Halls", image: "https://images.unsplash.com/photo-1587271407850-8d438ca9fdf2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwd2VkZGluZyUyMGhhbGx8ZW58MHx8fHwxNzExMzY3NDMwfDA&ixlib=rb-4.0.3&q=80&w=1080" },
@@ -29,7 +30,12 @@ const products = [
 const Index = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [cartItems, setCartItems] = useState(0);
+  const [searchQuery, setSearchQuery] = useState("");
   const toast = useToast();
+
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+  };
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
@@ -59,18 +65,7 @@ const Index = () => {
 
   return (
     <Box fontFamily="'Playfair Display', serif">
-      <Box bg="white" p={4} boxShadow="md">
-        <HStack justify="space-between">
-          <Heading size="xl" color="pink.500">
-            The Day
-          </Heading>
-          <HStack>
-            <FaShoppingCart />
-            <Text>{cartItems}</Text>
-            <FaUser />
-          </HStack>
-        </HStack>
-      </Box>
+      <Navbar products={products} onSearch={handleSearch} cartItems={cartItems} />
 
       <Box p={8}>
         <Heading size="2xl" mb={8} color="pink.500">
