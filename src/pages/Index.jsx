@@ -67,6 +67,14 @@ const Index = () => {
     <Box fontFamily="'Playfair Display', serif">
       <Navbar products={products} onSearch={handleSearch} cartItems={cartItems} />
 
+      <Box backgroundImage="url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')" backgroundPosition="center" backgroundRepeat="no-repeat" backgroundSize="cover" height="400px" display="flex" alignItems="center" justifyContent="center" textAlign="center">
+        <Text color="white" fontSize="2xl" fontWeight="bold" textShadow="2px 2px 4px rgba(0,0,0,0.6)" maxWidth="600px" mx="auto" p={4}>
+          우리는 모든 결혼식이 신혼부부만의 이야기를 담아야 한다고 생각합니다.
+          <br />
+          당신의 이야기만을 담기 위해, 번거로움을 없애겠습니다.
+        </Text>
+      </Box>
+
       <Box p={8}>
         <Heading size="2xl" mb={8} color="pink.500">
           Wedding Collection
