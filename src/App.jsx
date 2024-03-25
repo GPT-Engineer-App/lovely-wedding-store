@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
 // Assuming that the components are directly under the src directory, not in the components subdirectory.
 import WeddingHall from "./WeddingHall";
 import WeddingDress from "./WeddingDress";
@@ -14,6 +15,7 @@ function App() {
       <Route path="/photo-studio" element={<PhotoStudio />} />
       <Route path="/makeup" element={<Makeup />} />
       <Route path="/suit" element={<Suit />} />
+      <Route path="/" element={<Index />} />
     </Routes>
   );
 }
