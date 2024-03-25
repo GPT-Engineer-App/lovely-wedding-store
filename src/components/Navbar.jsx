@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, HStack, Input, IconButton, Text } from "@chakra-ui/react";
+import { Box, HStack, Input, IconButton, Text, VStack } from "@chakra-ui/react";
 import { FaSearch, FaShoppingCart, FaUser } from "react-icons/fa";
 
 const Navbar = ({ products, onSearch, cartItems }) => {
@@ -10,12 +10,12 @@ const Navbar = ({ products, onSearch, cartItems }) => {
   };
 
   return (
-    <Box bg="white" p={4} boxShadow="md">
-      <HStack justify="center" spacing={8}>
+    <VStack bg="white" p={4} boxShadow="md" align="stretch">
+      <HStack justify="space-between">
         <Text fontSize="2xl" fontWeight="bold" color="pink.500">
           The Day
         </Text>
-        <HStack spacing={4} justify="center">
+        <HStack spacing={4}>
           <Input placeholder="Search items..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
           <IconButton icon={<FaSearch />} aria-label="Search" onClick={handleSearch} />
           <HStack>
@@ -25,7 +25,12 @@ const Navbar = ({ products, onSearch, cartItems }) => {
           <FaUser />
         </HStack>
       </HStack>
-    </Box>
+      <HStack justify="center" spacing={8} mt={4}>
+        <Text>Submenu Item 1</Text>
+        <Text>Submenu Item 2</Text>
+        <Text>Submenu Item 3</Text>
+      </HStack>
+    </VStack>
   );
 };
 
