@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Box, Text, Heading, VStack, HStack, Image, Grid, Button, Input, Textarea, useToast, InputGroup, InputLeftElement } from "@chakra-ui/react";
-import { FaShoppingCart, FaUser, FaEnvelope, FaPhone, FaSearch } from "react-icons/fa";
+import { Box, Text, Heading, VStack, HStack, Image, Grid, Button, Input, Textarea, useToast } from "@chakra-ui/react";
+import { FaShoppingCart, FaUser, FaEnvelope, FaPhone } from "react-icons/fa";
 
 const categories = [
   { name: "Wedding Halls", image: "https://images.unsplash.com/photo-1587271407850-8d438ca9fdf2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwd2VkZGluZyUyMGhhbGx8ZW58MHx8fHwxNzExMzY3NDMwfDA&ixlib=rb-4.0.3&q=80&w=1080" },
@@ -61,18 +61,9 @@ const Index = () => {
     <Box fontFamily="'Playfair Display', serif">
       <Box bg="white" p={4} boxShadow="md">
         <HStack justify="space-between">
-          <HStack>
-            <Image src="path/to/logo.png" alt="The Day Logo" boxSize="50px" />
-            <Heading size="xl" color="pink.500">
-              The Day
-            </Heading>
-          </HStack>
-          <InputGroup maxW="300px">
-            <InputLeftElement pointerEvents="none">
-              <FaSearch color="gray.300" />
-            </InputLeftElement>
-            <Input type="text" placeholder="Search suppliers or services" />
-          </InputGroup>
+          <Heading size="xl" color="pink.500">
+            The Day
+          </Heading>
           <HStack>
             <FaShoppingCart />
             <Text>{cartItems}</Text>
@@ -81,13 +72,20 @@ const Index = () => {
         </HStack>
       </Box>
 
-      <Box p={8} position="relative">
-        <Image src="path/to/slider-image.jpg" alt="Happy Wedding Day" />
-        <Box position="absolute" top="50%" left="50%" transform="translate(-50%, -50%)" textAlign="center">
-          <Heading size="2xl" color="white" textShadow="2px 2px 4px rgba(0,0,0,0.5)">
-            당신의 행복한 결혼을 위해 그 날을 준비하는 어려움을 없애드립니다.
-          </Heading>
-        </Box>
+      <Box p={8}>
+        <Heading size="2xl" mb={8} color="pink.500">
+          Wedding Collection
+        </Heading>
+        <Grid templateColumns="repeat(auto-fit, minmax(200px, 1fr))" gap={8}>
+          {categories.map((category) => (
+            <Box key={category.name} onClick={() => handleCategoryClick(category)} cursor="pointer" borderRadius="md" overflow="hidden" boxShadow="md" transition="transform 0.2s" _hover={{ transform: "scale(1.05)" }}>
+              <Image src={category.image} alt={category.name} />
+              <Box p={4} bg="white">
+                <Heading size="md">{category.name}</Heading>
+              </Box>
+            </Box>
+          ))}
+        </Grid>
 
         {selectedCategory && (
           <Box mt={12}>
